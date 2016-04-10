@@ -13,10 +13,10 @@
       <form method="post">
         <table align="center" width="30%" border="0">
           <tr>
-            <td><input type="text" name="email" placeholder="Your Email" required /></td>
+            <td><input type="text" name="username" placeholder="Username" required /></td>
           </tr>
           <tr>
-            <td><input type="password" name="pass" placeholder="Your Password" required /></td>
+            <td><input type="password" name="pass" placeholder="Password" required /></td>
           </tr>
           <tr>
             <td><button type="submit" name="btn-login">Sign In</button></td>
