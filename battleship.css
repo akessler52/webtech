@@ -1,0 +1,12 @@
+body {
+    background-image: url("assets/webbackground.jpg");
+    background-repeat: repeat-y;
+}
+
+p {
+    color: rgb(255,255,255);
+}
+
+a {
+    color: rgb(255,255,255);
+}
