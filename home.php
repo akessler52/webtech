@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="battleship.css">
-    <?php include_once('header.php'); ?>
+    <?php include_once('headers.php'); ?>
     </head>
  <body>
 

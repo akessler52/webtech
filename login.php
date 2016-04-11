@@ -6,7 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="LoginRegStylesheet.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="battleship.css">
-    <?php include_once('header.php'); ?>
+    <?php include_once('headers.php'); ?>
   <body>
     <center>
       <div id="login-form">
@@ -22,7 +22,7 @@
             <td><button type="submit" name="btn-login">Sign In</button></td>
           </tr>
           <tr>
-            <td><p>Don't have an account?</p><a href="register.php">Sign Up Here</a></td>
+            <td align="center"><p>Don't have an account?</p><a href="register.php">Sign Up Here</a></td>
           </tr>
         </table>
       </form>

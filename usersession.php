@@ -1,15 +1,12 @@
 <?php
+  session_start();
+  include_once 'dbconnect.php';
+
   if(!isset($_SESSION['user']))
   {
-
+   header("Location: login.php");
+   //echo 'not loged in';
   }
-
-  elseif(isset($_SESSION['user']))
-  {
-    session_start();
-    include_once 'dbconnect.php';
-    $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-    $currentUser=mysql_fetch_array($res);
-  }
-
+  $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+  $userRow=mysql_fetch_array($res);
 ?>

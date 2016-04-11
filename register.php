@@ -6,7 +6,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="LoginRegStylesheet.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="battleship.css">
-    <?php include_once('header.php'); ?>
+    <?php include_once('headers.php'); ?>
   </head>
 
   <body>
@@ -15,19 +15,19 @@
         <form method="post">
         <table align="center" width="30%" border="0">
           <tr>
-            <td><input type="text" name="uname" placeholder="User Name" required /></td>
+            <td><input type="text" name="uname" placeholder="Username" required /></td>
           </tr>
           <tr>
-            <td><input type="email" name="email" placeholder="Your Email" required /></td>
+            <td><input type="email" name="email" placeholder="Email" required /></td>
           </tr>
           <tr>
-            <td><input type="password" name="pass" placeholder="Your Password" required /></td>
+            <td><input type="password" name="pass" placeholder="Password" required /></td>
           </tr>
           <tr>
             <td><button type="submit" name="btn-signup">Sign Up</button></td>
           </tr>
           <tr>
-            <td><p>Already have an account?</p><a href="login.php">Sign In Here</a></td>
+            <td align="center"><p>Already have an account?</p><a href="login.php">Sign In Here</a></td>
           </tr>
         </table>
         </form>
