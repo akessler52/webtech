@@ -16,7 +16,9 @@
    {
     ?>
           <script>alert('registered ');</script>
+
           <?php
+          header("Location: login.php");
    }
    else
    {
