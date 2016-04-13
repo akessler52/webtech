@@ -1,0 +1,71 @@
+body {
+    background-image: url("assets/webbackground4.jpg");
+    background-repeat: repeat-y;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    align: center;
+    margin-left: 25%;
+}
+
+table a {
+    color: #000;
+}
+
+table a:hover {
+    color:#373737;
+    text-decoration: none;
+}
+
+th {
+    background-color: #B40E1F;
+    color: #F0F0F0;
+}
+
+td {
+    padding: 5px;
+    background-color: rgb(0,0,150);
+}
+
+/* Begin font styles */
+
+h3 {margin: 0; padding: 0;}
+
+.item {
+    background-color: #00728B;
+    border: 1px solid #032472;
+    color: #FFF;
+    font-family: Arial;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.leftpart {
+    width: 30%;
+}
+
+.rightpart {
+    width: 30%;
+}
+
+.small {
+    font-size: 75%;
+    color: #373737;
+}
+
+.topic-post {
+    height: 100px;
+    overflow: auto;
+}
+
+.post-content {
+    padding: 30px;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}

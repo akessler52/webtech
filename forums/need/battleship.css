@@ -1,0 +1,45 @@
+body {
+    background-image: url("assets/webbackground4.jpg");
+    background-repeat: repeat-y;
+    text-align: center;
+}
+
+.well {
+  min-height:20px;
+  padding:15px 20px;
+  background-color:#434343;
+  text-shadow:0 1px 0 rgba(19,18,19,0.5);
+  border-radius:4px;
+  box-shadow:inset 0 1px 1px rgba(0,0,0,0.05)
+}
+
+.well blockquote{
+  border-color:#ddd;
+  border-color:rgba(0,0,0,0.15)
+}
+
+.table {
+  width:100%;
+  margin-bottom:18px
+}
+
+.table th,.table td {
+  padding:8px;
+  line-height:18px;
+  text-align:left;
+  vertical-align:top;
+  border-top:1px solid #373737
+}
+
+.table th{
+  font-weight:bold;
+  color:#d7d5ca
+}
+
+.table th a{
+  color:#d7d5ca
+}
+
+.table th a:hover{
+  color:#b6b29e
+}
