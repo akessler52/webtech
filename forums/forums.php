@@ -1,17 +1,4 @@
-<?php
-  session_start();
-  include_once 'need/dbconnect.php';
-
-  if(!isset($_SESSION['user']))
-  {
-    header("Location: login.php");
-  }
-
-  $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-  $userRow=mysql_fetch_array($res);
-
-  $res=mysql_query("SELECT * FROM categories");
-?>
+<?php include_once('connectforums.php'); ?>
 <!DOCTYPE html>
 <html>
   <head lang="en">
@@ -29,6 +16,7 @@
        }
        else
        {
+           echo '<h2>Categorys</h2>';
            if(mysql_num_rows($res) == 0)
            {
                echo 'No categories defined yet.';
@@ -42,14 +30,19 @@
                        <th>Last topic</th>
                      </tr>';
 
-               while($row = mysql_fetch_assoc($res))
+               while($row = mysql_fetch_assoc($res) )
                {
+                 //while($trow = mysql_fetch_assoc(mysql_query("SELECT topic_id,topic_subject,topic_date,topic_cat FROM topics WHERE topic_cat = " . mysql_real_escape_string($_GET['id']))))
+
+                 //$i=mysql_query("SELECT topic_subject FROM topics WHERE topic_cat='$row['cat_id']'");
+
                    echo '<tr>';
                        echo '<td class="leftpart">';
-                           echo '<h3><a href="category.php?cat_id=">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
+                           echo '<h3><a href="category.php?cat_id=' . $row['cat_id'] . '">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
                        echo '</td>';
-                       echo '<td class="rightpart"><a href="topic.php?topic_id=">Topic subject</a></td>';
+                       echo '<td class="rightpart"><a href="topic.php?topic_id=' . $row['cat_id'] . '">topic</a></td>';
                    echo '</tr>';
+
                }
            }
        }

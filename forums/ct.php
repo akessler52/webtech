@@ -3,7 +3,7 @@
 
   include_once 'need/dbconnect.php';
 
-  $tb = $_SESSION['user'];
+
 
   $sql = "SELECT * FROM `categories`";
 

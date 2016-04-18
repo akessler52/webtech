@@ -11,9 +11,6 @@
           <li><a href="/webtech/game/game.php">Game</a></li>
           <li><a href="/webtech/forums/forums.php">Forums</a></li>
           <li><a href="/webtech/scoreboard.php">Scoreboard</a></li>
-          <li><a href="createtopic.php">New topic</a></a></li>
-          <li><a href="createcat.php">New category</a></li>
-          <li><a href="reply.php">reply</a></li>
           <ul style="float:right">
               <li><a href="/webtech/profile.php">Hello <?php echo $userRow['username']; ?></a></li>
               <li><a href="/webtech/logout.php?logout">Sign Out</a></li>

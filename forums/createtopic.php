@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>Create Catagory</title>
+    <title>Create Topic</title>
     <link rel="stylesheet" href="need/formStylesheet.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="need/battleship.css">
     <?php include_once('need/headers.php'); ?>

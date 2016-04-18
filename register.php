@@ -21,8 +21,22 @@
             <td><input type="email" name="email" placeholder="Email" required /></td>
           </tr>
           <tr>
-            <td><input type="password" name="pass" placeholder="Password" required /></td>
+            <td><input type="password" name="pass" placeholder="Password" id="password" required /></td>
           </tr>
+          </tr>
+          <tr>
+            <td><input type="password" name="password_confirm" placeholder="Confirm Password" id="password_confirm" oninput="check(this)" required /></td>
+          </tr>
+          <script language='javascript' type='text/javascript'>
+            function check(input) {
+              if (input.value != document.getElementById('password').value) {
+                input.setCustomValidity('Password Must be Matching.');
+              }
+              else {
+                input.setCustomValidity('');
+              }
+            }
+          </script>
           <tr>
             <td><button type="submit" name="btn-signup">Sign Up</button></td>
           </tr>

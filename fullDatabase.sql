@@ -1,10 +1,11 @@
-CREATE DATABASE `FinalProject` ;
+CREATE DATABASE `FinalProject`;
 
 CREATE TABLE `FinalProject`.`users` (
 `user_id` INT(8) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `username` VARCHAR(16) NOT NULL,
 `email` VARCHAR(32) NOT NULL,
 `password` VARCHAR(64) NOT NULL,
+`level` INT(8) NOT NULL,
 UNIQUE (`email`),
 UNIQUE (`username`)
 ) ENGINE = MYISAM;
