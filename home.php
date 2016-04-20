@@ -8,5 +8,5 @@
     <?php include_once('headers.php'); ?>
     </head>
  <body>
-
+   <img class="centered" src="http://dpanoply.s3.amazonaws.com/styles/850x340/s3/images/battleship-text-effect-using-layer-styles-teaser.jpg?itok=YGoj6hBx"></img>
 </body>
