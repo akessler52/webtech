@@ -9,4 +9,5 @@
     </head>
  <body>
    <?php include_once('BATTLESHIP.php'); ?>
+   <!-- BUTTON to href itself -->
 </body>
