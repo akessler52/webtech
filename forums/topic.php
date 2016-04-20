@@ -50,12 +50,12 @@ else
             }
             else
             {
-                //prepare the table
-                echo '<table border="1">
-                      <tr>
-                        <th>x</th>
-                        <th>y</th>
-                      </tr>';
+                $header=mysql_query("SELECT topic_subject FROM topics WHERE topic_id = " . mysql_real_escape_string($_GET['id']));
+                //prep the table
+                echo '<table border="1">';
+                echo      '<tr>';
+                echo        '<th colspan="2">_</th>';
+                echo      '</tr>';
 
                 while($row = mysql_fetch_assoc($result))
                 {
@@ -71,6 +71,7 @@ else
                         echo '</td>';
                     echo '</tr>';
                 }
+                echo '<td colspan="2"><a href="reply.php?id=' . mysql_real_escape_string($_GET['id']) . '"><button type="submit" name="Reply">Reply</button></a></td>';
             }
         }
     }

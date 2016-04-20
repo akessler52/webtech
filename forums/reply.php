@@ -10,7 +10,7 @@
   if(isset($_POST['btn-signup']))
   {
    $ts = mysql_real_escape_string($_POST['ts']);
-   $tc = mysql_real_escape_string($_POST['tc']);
+   $tc = mysql_real_escape_string($_GET['id']);
    if(mysql_query("INSERT INTO posts(post_content,post_date,post_topic,post_by)
    VALUES('". $ts . "',NOW()," . $tc . "," . $_SESSION['user'] . ")"))
    {
@@ -44,15 +44,6 @@
       <table align="center" width="30%" border="0">
         <tr>
           <td><textarea name="ts" placeholder="Reply" required /></textarea></td>
-        </tr>
-        <tr>
-          <td><select name="tc">
-            <?php while($row = mysql_fetch_assoc($result))
-                    {
-                        echo '<option value="' . $row['topic_id'] . '">' . $row['topic_subject'] . '</option>';
-                    }?>
-
-          </select></td>
         </tr>
         <tr>
           <td><button type="submit" name="btn-signup">Reply</button></td>
