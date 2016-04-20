@@ -17,7 +17,7 @@
     ?>
           <script>alert('Reply Successfull');</script>
           <?php
-          header("Location: /webtech/forums/forums.php");
+          header("Location: /webtech/forums/topic.php?id=" . mysql_real_escape_string($_GET['id']));
    }
    else
    {

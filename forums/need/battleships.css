@@ -11,6 +11,16 @@ table {
     margin-left: 25%;
 }
 
+h2 {
+  padding: 5px;
+  background-color: rgb(100,100,100);
+  color: #F0F0F0;
+  border-collapse: collapse;
+  width: 30%;
+  align: center;
+  margin-left: 35%;
+}
+
 table a {
     color: rgb(250,250,250);
 }

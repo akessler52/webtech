@@ -17,7 +17,7 @@
        }
        else
        {
-           echo '<h2>Categorys</h2>';
+           echo '<h2>Categories</h2>';
            if(mysql_num_rows($res) == 0)
            {
                echo 'No categories defined yet.';

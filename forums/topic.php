@@ -30,7 +30,7 @@ else
         //display category data
         while($row = mysql_fetch_assoc($result))
         {
-            echo '<h2></h2>';
+            echo '<h2>Topic</h2>';
         }
 
         //do a query for the topics
@@ -46,7 +46,9 @@ else
         {
             if(mysql_num_rows($result) == 0)
             {
-                echo 'there have been no postes in this topic yet.';
+                echo '<table border="2"><tr><th>there have been no postes in this topic yet.</th></tr></table>';
+                echo '<br>';
+                echo '<td colspan="2"><a href="reply.php?id=' . mysql_real_escape_string($_GET['id']) . '"><button type="submit" name="Reply">BE THE FIRST</button></a></td>';
             }
             else
             {
