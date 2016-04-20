@@ -30,7 +30,10 @@
 		padding: 10px;
 		background-color: #696969;
 		}
-
+	button{
+		padding: 0px 0px;
+		border: 0px;
+	}
 
    </style>
 </head>
@@ -46,9 +49,9 @@ var ship =  [[[1,5], [1,2,5], [1,2,3,5], [1,2,3,4,5]], [[6,10], [6,7,10], [6,7,8
 var dead = [[[201,203], [201,202,203], [201,202,202,203], [201,202,202,202,203]], [[204,206], [204,205,206], [204,205,205,206], [204,205,205,205,206]]];
 
 /* Information used to describe ships */
-var shiptypes = [["Minesweeper",2,1],["Frigate",3,0],[ "Cruiser",4,0],[ "Battleship",5,0]];
+var shiptypes = [["Minesweeper",2,2],["Frigate",3,2],[ "Cruiser",4,1],[ "Battleship",5,1]];
 
-var gridx = 2, gridy = 2;
+var gridx = 10, gridy = 10;
 var player = [], computer = [], playersships = [], computersships = [];
 var playerlives = 0, computerlives = 0, playflag=true, statusmsg="";
 score=0;
@@ -321,6 +324,12 @@ updateStatus();
 setInterval("setStatus();", 500);
 
  </script>
+
+ <center><button> 
+ <a href="game.php"><img src="playagain.png" alt=""/>
+ </a>
+ </button></center>
+
 
 
 </body>
