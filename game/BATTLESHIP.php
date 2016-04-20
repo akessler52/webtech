@@ -35,7 +35,9 @@
    </style>
 </head>
 <body>
- <script type="text/javascript">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript" >
+ 
 
 /* Information used to draw the ships */
 var ship =  [[[1,5], [1,2,5], [1,2,3,5], [1,2,3,4,5]], [[6,10], [6,7,10], [6,7,8,10], [6,7,8,9,10]]];
@@ -44,9 +46,9 @@ var ship =  [[[1,5], [1,2,5], [1,2,3,5], [1,2,3,4,5]], [[6,10], [6,7,10], [6,7,8
 var dead = [[[201,203], [201,202,203], [201,202,202,203], [201,202,202,202,203]], [[204,206], [204,205,206], [204,205,205,206], [204,205,205,205,206]]];
 
 /* Information used to describe ships */
-var shiptypes = [["Minesweeper",2,2],["Frigate",3,2],[ "Cruiser",4,2],[ "Battleship",5,1]];
+var shiptypes = [["Minesweeper",2,1],["Frigate",3,0],[ "Cruiser",4,0],[ "Battleship",5,0]];
 
-var gridx = 12, gridy = 12;
+var gridx = 2, gridy = 2;
 var player = [], computer = [], playersships = [], computersships = [];
 var playerlives = 0, computerlives = 0, playflag=true, statusmsg="";
 score=0;
@@ -150,8 +152,8 @@ function showGrid(ispc) {
 }
 
 /* Handler for clicking on the grid */
-function gridClick(y,x) {
-  if ( playflag ) {
+function gridClick(y,x) {	
+  if ( playflag ) {  
   if (computer[y][x][0] < 100) {
     setImage(y,x,103,true);
     var shipno = computer[y][x][1];
@@ -160,21 +162,29 @@ function gridClick(y,x) {
       alert("You sank my "+shiptypes[computersships[shipno][0]][0]+"!");
       updateStatus();
       if ( --computerlives == 0 ) {
+		  
         alert("You win! Press the Refresh button on\n"+
         "your browser to play another game.");
         playflag = false;
-		var user  = <?php $userRow; ?>
+		var user = '<?php $_SESSION['user']; ?>'
 		
-		$.ajax({
-            url: "update.php",
-            type: "POST",
-            data: { 'username': user, 'score': score },                   
-            success: function()
-                        {
-                            alert("ok");                                    
-                        }
-        });
+		 $.ajax({
+            url: "update.php", 
+			type: "POST",
+			data:{'score_id': user },
+            success: function(data){ alert(data);}                                    
+        }); 
+		/* $.ajax({
+                    url:'update.php',
+                    POST:$number,
+                    dataType:'json',
+                    success:function(data){
+                          $number;
+                    }
+      }); */
+		
       }
+	  
     }
     if ( playflag ) computerMove();
     } else if (computer[y][x][0] == 100) {
